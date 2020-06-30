@@ -1,0 +1,68 @@
+{
+  "name": "super-platform/station-wallet",
+  "description": "Station Wallet",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Liao San Kai",
+      "email": "liaosankai@js-tech.tw"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@git.sp168.cc:super-platform/laravel-package/api-caller.git"
+    },
+    {
+      "type": "git",
+      "url": "git@git.sp168.cc:super-platform/laravel-package/query-filter.git"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "laravel/framework": "5.6.*",
+    "illuminate/database": "~5.3",
+    "illuminate/support": "~5.3",
+    "kblais/query-filter": "v0.2.0",
+    "vinkla/hashids": "^5.0",
+    "robinvdvleuten/ulid": "^1.1",
+    "ariby/ulid": ">=0.2.1",
+    "super-platform/api-caller": "^1.9",
+    "ext-json": "*",
+    "chaoyenpo/sign-code": "^0.0.8"
+  },
+  "require-dev": {
+    "illuminate/http": "~5.3",
+    "illuminate/routing": "~5.3",
+    "phpunit/phpunit": "^7",
+    "vlucas/phpdotenv": "~2.0",
+    "orchestra/testbench": "3.6.*",
+    "orchestra/database": "3.6.*",
+    "mockery/mockery": "^1.0",
+    "illuminate/config": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "SuperPlatform\\StationWallet\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SuperPlatform\\StationWallet\\Tests\\": "tests/"
+    },
+    "classmap": [
+      "tests/",
+      "database/migrations/",
+      "database/factories/"
+    ]
+  },
+  "minimum-stability": "stable",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SuperPlatform\\StationWallet\\StationWalletServiceProvider"
+      ],
+      "aliases": {}
+    }
+  }
+}

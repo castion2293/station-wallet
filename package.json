@@ -1,0 +1,26 @@
+{
+  "name": "station-wallet",
+  "version": "1.27.4",
+  "description": "遊戲站錢包等同於（自有/第三方）遊戲站內的遊戲會員帳號，在我方應用上會搭配 User Model 一併建立所有遊戲站的錢包（遊戲會員帳號）",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "standard-version": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "release": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "br-release": "standard-version && VERSION=`awk '/\"version\"/{gsub(/(\"|\",)/,\"\",$2);print $2};' package.json` && git checkout -b $VERSION",
+    "br-push": "VERSION=`awk '/\"version\"/{gsub(/(\"|\",)/,\"\",$2);print $2};' package.json` && git push --set-upstream origin $VERSION && git push --tags",
+    "br-release-auto": "npm run br-release && npm run br-push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.sp168.cc:super-platform/laravel-package/station-wallet.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
